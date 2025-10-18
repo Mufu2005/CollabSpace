@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collabspace.API", "Collabspace.API\Collabspace.API.csproj", "{DEC9B654-D349-CE32-3269-334167F96F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collabspce.Application", "Collabspce.Application\Collabspce.Application.csproj", "{93240D09-3909-CC46-7A26-490FD27B581D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collabspce.Domain", "Collabspce.Domain\Collabspce.Domain.csproj", "{EC44256E-8075-C475-19A9-0954CD9418AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collabspce.Infrastructure", "Collabspce.Infrastructure\Collabspce.Infrastructure.csproj", "{E32ED3FF-37E2-7225-C1C3-6476C417CDAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collabspce.Persistence", "Collabspce.Persistence\Collabspce.Persistence.csproj", "{A67BB336-FDA6-02BA-C264-89B749DFAC11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEC9B654-D349-CE32-3269-334167F96F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC9B654-D349-CE32-3269-334167F96F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC9B654-D349-CE32-3269-334167F96F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC9B654-D349-CE32-3269-334167F96F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93240D09-3909-CC46-7A26-490FD27B581D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93240D09-3909-CC46-7A26-490FD27B581D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93240D09-3909-CC46-7A26-490FD27B581D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93240D09-3909-CC46-7A26-490FD27B581D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC44256E-8075-C475-19A9-0954CD9418AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC44256E-8075-C475-19A9-0954CD9418AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC44256E-8075-C475-19A9-0954CD9418AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC44256E-8075-C475-19A9-0954CD9418AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32ED3FF-37E2-7225-C1C3-6476C417CDAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32ED3FF-37E2-7225-C1C3-6476C417CDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32ED3FF-37E2-7225-C1C3-6476C417CDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32ED3FF-37E2-7225-C1C3-6476C417CDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67BB336-FDA6-02BA-C264-89B749DFAC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67BB336-FDA6-02BA-C264-89B749DFAC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67BB336-FDA6-02BA-C264-89B749DFAC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67BB336-FDA6-02BA-C264-89B749DFAC11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBA2BB75-6BCD-4066-BD58-588F71D21988}
+	EndGlobalSection
+EndGlobal
