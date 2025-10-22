@@ -11,8 +11,8 @@ namespace CollabSpace.API.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Get() => Ok("CollabSpace is alive!");
+        //[HttpGet]
+        //public IActionResult Get() => Ok("CollabSpace is alive!");
 
     }
 }
