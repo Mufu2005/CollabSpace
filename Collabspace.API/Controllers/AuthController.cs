@@ -25,7 +25,7 @@ namespace CollabSpace.API.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Login(LoginDto dto)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == dto.Email);
@@ -36,7 +36,7 @@ namespace CollabSpace.API.Controllers
             }
 
             string token = GenerateJwtToken(user.Email, user.Roles);
-            return Ok(new { Token = token });
+            return RedirectToAction("Index", "HomeController");
         }
 
         public IActionResult Register()
@@ -57,7 +57,8 @@ namespace CollabSpace.API.Controllers
             _context.Users.Add(model);
             _context.SaveChanges();
 
-            return View();
+            ViewBag.Token = GenerateJwtToken(model.Email, model.Roles);
+            return RedirectToAction("Index", "HomeController");
         }
 
         public string HashPassword(string password)
