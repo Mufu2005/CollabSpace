@@ -6,13 +6,17 @@ namespace CollabSpace.API.Controllers
     [Route("Home")]
     public class HomeController : Controller
     {
+        [Route("Home")]
         public IActionResult Index()
         {
             return View();
         }
-
-        //[HttpGet]
-        //public IActionResult Get() => Ok("CollabSpace is alive!");
+        [Route("Dashboard")]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+        
 
     }
 }

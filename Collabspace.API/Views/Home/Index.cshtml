@@ -4,11 +4,168 @@
 @{
 }
 
-﻿@{
-	ViewData["Title"] = "Home Page";
+@{
+	ViewData["Title"] = "Home - CollabSpace";
+	Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/Home.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+	<div class="site-wrapper fade-in-page">
 
-<h1>Welcome to CollabSpace 🌟</h1>
-<p>Your collaboration hub is alive!</p>
+		<!-- MAIN HERO / LEFT -->
+		<main class="main-hero slide-up">
+			<div class="hero-top">
+				<div class="hero-title">CollabSpace — where teams move as one.</div>
+				<div class="hero-sub">Plan boards, chat in real-time, and see progress as it happens. Designed for small teams, built for growth.</div>
 
-<a class="nav-link space-mono-regular" asp-area="" asp-controller="Auth" asp-action="Login">Home</a>
+				<div class="hero-cta">
+					<a class="cta-primary hover-pop" href="/Auth/Register">Get started — it’s free</a>
+					<a class="cta-secondary hover-pop" href="/Auth/Login">Sign in</a>
+				</div>
+			</div>
+
+			<div class="features-grid fade-in-delay-1">
+				<div class="feature float-card">
+					<h3>Real-time Boards</h3>
+					<p>Drag, drop, and rearrange tasks — everyone sees changes instantly.</p>
+				</div>
+
+				<div class="feature float-card">
+					<h3>Integrated Chat</h3>
+					<p>Contextual conversations tied to projects and tasks — no more scattered messages.</p>
+				</div>
+
+				<div class="feature float-card">
+					<h3>Roles & Permissions</h3>
+					<p>Owners, editors, and viewers — control access with simple roles.</p>
+				</div>
+			</div>
+
+			<div class="preview-card fade-in-delay-2">
+				<strong style="font-size:14px; display:block; margin-bottom:8px;">Live Board Preview</strong>
+				<div class="preview-board">
+					<div class="column">
+						<div class="task pulse">Design hero section</div>
+						<div class="task pulse">Create login page</div>
+						<div class="task pulse">Decide color tokens</div>
+					</div>
+
+					<div class="column">
+						<div class="task pulse">Implement SignalR hub</div>
+						<div class="task pulse">Write integration tests</div>
+					</div>
+
+					<div class="column">
+						<div class="task pulse">Deploy to SmarterASP</div>
+						<div class="task pulse">Record demo video</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="preview-card fade-in-delay-3">
+				<strong style="font-size:14px; display:block; margin-bottom:8px;">How it works</strong>
+				<ol style="color:var(--muted); margin-left:18px; margin-top:8px;">
+					<li>Create a workspace and invite teammates.</li>
+					<li>Add projects and tasks; assign owners and due dates.</li>
+					<li>Use the chat panel to coordinate in real-time.</li>
+				</ol>
+			</div>
+
+			<div class="site-footer fade-in-delay-4">
+				<div style="margin-bottom:8px;">Made with intent ✨ — CollabSpace</div>
+				<div style="font-size:13px; color:var(--muted);">
+					<a href="/Auth/Register">Join</a> · <a href="/Auth/Login">Sign in</a> · <a href="#">Docs</a>
+				</div>
+			</div>
+		</main>
+
+		<!-- SIDEBAR / RIGHT -->
+		<aside class="sidebar fade-in-delay-2">
+
+			<div class="quick-card activity-widget float-card">
+				<h3 style="margin-bottom:8px;">Live Activity</h3>
+				<ul class="activity-list">
+					<li><span class="dot"></span> Ayesha moved “Login Page” to Done</li>
+					<li><span class="dot"></span> Bilal commented on “SignalR Hub”</li>
+					<li><span class="dot"></span> Fatima uploaded design mockups</li>
+					<li><span class="dot"></span> Ahmed assigned tasks to teammates</li>
+				</ul>
+			</div>
+
+			<div class="quick-card fade-in-delay-3">
+				<h3 style="margin-bottom:10px;">Why CollabSpace?</h3>
+				<p style="color:var(--muted); font-size:13px;">
+					Fast. Private. Minimal. Designed for makers who love clarity over clutter.
+				</p>
+				<ul style="color:var(--muted); margin-top:10px; font-size:13px;">
+					<li>Instant sync</li>
+					<li>Simple permissions</li>
+					<li>Clean, minimal UI</li>
+				</ul>
+			</div>
+
+			<div class="quick-card fade-in-delay-4">
+				<h3 style="margin-bottom:10px;">Community Notes</h3>
+				<div class="testimonials">
+					<div class="testimonial float-card">"Exactly what we needed." — Hina</div>
+					<div class="testimonial float-card">"Our meetings got shorter." — Ali</div>
+				</div>
+			</div>
+
+			<div class="tech-ribbon fade-in-delay-3 float-card">
+				<div class="ribbon-track">
+					<div>.NET</div>
+					<div>SignalR</div>
+					<div>EF_Core</div>
+					<div>MySQL</div>
+					<div>Docker</div>
+					<div>Jenkins</div>
+					<div>Kubernetes</div>
+					<div>Integration_Tests</div>
+				</div>
+			</div>
+
+			<div class="tech-ribbon fade-in-delay-3 float-card">
+				<div class="ribbon-track">
+					<div>Microsoft</div>
+					<div>Apple</div>
+					<div>Oracle</div>
+					<div>Samsung</div>
+					<div>Nextgen</div>
+					<div>Amazon</div>
+					<div>Uniliver</div>
+					<div>Sony</div>
+				</div>
+			</div>
+
+			<div class="quick-card activity-widget float-card">
+
+				In a world where ideas scatter like sparks,
+				CollabSpace gathers them into constellations.
+				Here, collaboration feels effortless,
+				projects breathe with clarity,
+				and creativity flows without friction.
+
+				We believe teamwork should feel inspiring —
+				a shared rhythm toward something greater.
+				This is where ambitions orbit freely,
+				and tomorrow’s innovations take flight.
+
+				CollabSpace isn’t just a tool;
+				it’s the pulse of progress.
+				Step inside —
+				the future is waiting.
+
+			</div>
+
+		</aside>
+	</div>
+</body>
+</html>

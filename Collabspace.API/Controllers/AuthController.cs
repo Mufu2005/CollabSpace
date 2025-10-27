@@ -36,7 +36,7 @@ namespace CollabSpace.API.Controllers
             }
 
             string token = GenerateJwtToken(user.Email, user.Roles);
-            return RedirectToAction("Index", "HomeController");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Register()
@@ -58,7 +58,7 @@ namespace CollabSpace.API.Controllers
             _context.SaveChanges();
 
             ViewBag.Token = GenerateJwtToken(model.Email, model.Roles);
-            return RedirectToAction("Index", "HomeController");
+            return RedirectToAction("Index", "Home");
         }
 
         public string HashPassword(string password)

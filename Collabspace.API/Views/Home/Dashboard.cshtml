@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Dashboard — CollabSpace";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Dashboard.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+
+<body>
+    <div class="dashboard-container fade-in-page">
+
+        <header class="dash-header slide-up">
+            <h1>Dashboard</h1>
+            <p class="tagline">Where progress takes shape.</p>
+            <button class="accent-btn hover-pop">+ New Task</button>
+        </header>
+
+        <section class="stats-row">
+            <div class="stat-card float-card">
+                <strong>Projects</strong>
+                <span>3 Active</span>
+            </div>
+
+            <div class="stat-card float-card">
+                <strong>Tasks</strong>
+                <span>14 In Progress</span>
+            </div>
+
+            <div class="stat-card float-card">
+                <strong>Team</strong>
+                <span>5 Members</span>
+            </div>
+        </section>
+
+        <section class="columns">
+
+            <div class="panel float-card fade-in-delay-1">
+                <h2>Live Activity</h2>
+                <ul class="activity-list">
+                    <li><span class="dot"></span> You updated “Kanban Board”</li>
+                    <li><span class="dot"></span> Ayesha commented on UI</li>
+                    <li><span class="dot"></span> Ali assigned tasks</li>
+                    <li><span class="dot"></span> Hina joined Workspace</li>
+                </ul>
+            </div>
+
+            <div class="panel float-card fade-in-delay-2">
+                <h2>Upcoming Deadlines</h2>
+                <ul class="deadline-list">
+                    <li>JWT Tokens — <b class="urgent">Today</b></li>
+                    <li>Team Roles — <b class="soon">Tomorrow</b></li>
+                    <li>Board Dragging — <b class="normal">3 days</b></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <footer class="dash-footer fade-in-delay-3">
+            Built with clarity ✨ CollabSpace
+        </footer>
+
+    </div>
+</body>
+</html> 
