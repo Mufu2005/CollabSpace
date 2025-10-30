@@ -11,6 +11,8 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CollabSpace.API.Controllers
 {
+    [ApiController]
+    [Route("CollabSpace")]
     public class AuthController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,13 +22,17 @@ namespace CollabSpace.API.Controllers
             _config = configuration;
             this._context = context;
         }
+
+        [HttpGet]
+        [Route("Login")]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginDto dto)
+        [Route("Login")]
+        public async Task<IActionResult> Login([FromForm] LoginDto dto)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == dto.Email);
             if (user == null || !VerifyPassword(dto.Password, user.PasswordHash))
@@ -35,17 +41,31 @@ namespace CollabSpace.API.Controllers
                 return View();
             }
 
-            string token = GenerateJwtToken(user.Email, user.Roles);
-            return RedirectToAction("Index", "Home");
+            string username = user.Email.Split('@')[0].ToUpper();
+
+            string token = GenerateJwtToken(username, user.Roles);
+
+            Response.Cookies.Append("AuthToken", token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1)
+            });
+
+            return RedirectToAction("Dashboard", "CollabSpace");
         }
 
+        [HttpGet]
+        [Route("Register")]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Register(RegisterDto dto)
+        [Route("Register")]
+        public IActionResult Register([FromForm] RegisterDto dto)
         {
             string HashedPass = HashPassword(dto.Password);
             var model = new Domain.Entities.User
@@ -58,7 +78,7 @@ namespace CollabSpace.API.Controllers
             _context.SaveChanges();
 
             ViewBag.Token = GenerateJwtToken(model.Email, model.Roles);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Auth");
         }
 
         public string HashPassword(string password)

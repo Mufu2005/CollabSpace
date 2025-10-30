@@ -24,8 +24,4 @@
     <ProjectReference Include="..\CollabSpace.Infrastructure\CollabSpace.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-
 </Project>
