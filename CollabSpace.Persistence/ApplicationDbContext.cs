@@ -13,5 +13,6 @@ namespace CollabSpace.Persistence
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Workspace> Workspaces { get; set; }
     }
 }

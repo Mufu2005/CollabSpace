@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CollabSpace.Domain\CollabSpace.Domain.csproj" />
+    <ProjectReference Include="..\CollabSpace.Persistence\CollabSpace.Persistence.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
